@@ -1,0 +1,42 @@
+<mat-card class="card">
+  <mat-card-title>Añadir Producto</mat-card-title>
+  <mat-card-content class="card-content">
+    <form (submit)="newProduct()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" name="name" [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" name="stock" [(ngModel)]="stock">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" name="price" [(ngModel)]="price">
+      </mat-form-field>
+        <mat-label>Activo</mat-label>
+        <mat-slide-toggle name="active" [(ngModel)]="active">Available</mat-slide-toggle>
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha añadido</mat-label>
+        <input matInput type="date" name="date_added" [(ngModel)]="date_added">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select name="category" [(ngModel)]="category.id">
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="buttons">
+        <button mat-raised-button color="primary" type="submit">
+          <mat-icon>save</mat-icon> Guardar
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="cancelInsert()">
+          <mat-icon>cancel</mat-icon> Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+

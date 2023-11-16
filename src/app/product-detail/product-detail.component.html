@@ -1,0 +1,28 @@
+<mat-card class="card">
+    <mat-card-title>Detalle de producto</mat-card-title>
+    <mat-card-content class="card-content">
+        <p>
+            <mat-icon>shopping_cart</mat-icon> <strong>ID:</strong>{{product.id}}
+        </p>
+        <p>
+            <mat-icon>shopping_basket</mat-icon> <strong>Nombre Producto:</strong>{{product.name}}
+        </p>
+        <p>
+            <mat-icon>store</mat-icon> <strong>Stock:</strong>{{product.stock}}
+        </p>
+        <p>
+            <mat-icon>euro_symbol</mat-icon> <strong>Precio:</strong>{{product.price}}
+        </p>
+        <p>
+            <mat-icon>description</mat-icon> <strong>Disponibilidad:</strong>{{product.active}}
+        </p>
+        <p>
+            <mat-icon>contact_support</mat-icon> <strong>Fecha Alta:</strong>{{product.date_added}}
+        </p>
+
+        <button mat-icon-button color="primary" (click)="editProductDetail(product.id); $event.stopPropagation()">
+            <mat-icon>edit</mat-icon>
+          </button>
+          
+    </mat-card-content>
+    </mat-card>

@@ -1,0 +1,54 @@
+/* Estilo para la tabla */
+table {
+  margin: 20px 0 0 40px;
+  width: calc(100% - 80px);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+#new-contact {
+  margin: 20px 0 0 40px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#new-contact h2 {
+  margin-bottom: 10px;
+}
+
+#new-contact input,
+#new-contact select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#new-contact button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-contact button:hover {
+  background-color: #45a049;
+}
