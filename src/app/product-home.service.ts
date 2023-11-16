@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
+  deleteProduct(productId: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -34,6 +37,16 @@ export class ProductsService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const body = product;
     this.http.put(url, body ,{headers}).subscribe();
+  }
+
+  deleteContact(contactId: number): void{
+    const url = 'http://localhost:30030/products/delete';
+    const body = {id: contactId};
+    const options = {
+      body: body,
+      headers: new HttpHeaders()
+    };
+    this.http.delete(url, options).subscribe();
   }
 
 }

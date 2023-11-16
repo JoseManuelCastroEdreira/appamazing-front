@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
-import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatOption, MatOptionModule, MatSelect, MatSelectModule, MatSlideToggle, MatSlideToggleModule, MatTableModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDatepickerModule, MatDialogModule, MatIconModule, MatInputModule, MatNativeDateModule, MatOption, MatOptionModule, MatSelect, MatSelectModule, MatSlideToggle, MatSlideToggleModule, MatTableModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
@@ -14,6 +14,10 @@ import { ProductNewComponent } from './product-new/product-new.component';
 import { FormsModule } from '@angular/forms';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ContactDeleteComponent } from './contact-delete/contact-delete.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { ChartsComponent } from './charts/charts.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -25,8 +29,12 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     ContactNewComponent,
     ProductNewComponent,
     ContactUpdateComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ContactDeleteComponent,
+    ProductDeleteComponent,
+    ChartsComponent
   ],
+  entryComponents:[ContactDeleteComponent, ProductDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,7 +49,12 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatDialogModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
