@@ -19,6 +19,9 @@
         <p>
             <mat-icon>contact_support</mat-icon> <strong>Fecha Alta:</strong>{{product.date_added}}
         </p>
+        <p>
+            <mat-icon>class</mat-icon> <strong>Categoria:</strong>{{product.category.name}}
+        </p>
 
         <button mat-icon-button color="primary" (click)="editProductDetail(product.id); $event.stopPropagation()">
             <mat-icon>edit</mat-icon>
