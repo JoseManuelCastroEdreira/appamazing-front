@@ -1,42 +1,132 @@
 <mat-card class="card">
-    <mat-card-title>
-        Charts- Contacts
-    </mat-card-title>
-    <mat-card-content>
-        <div class="chart-row">
-        <div>
-            <p><strong> Initial Surname</strong></p>
-            
-            <ngx-charts-bar-vertical [view]="[400,300]" [results]="initialLetter" [xAxis]="true" [yAxis]= "true"
-            [legend]="false" [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Initial of surname"
-            yAxsisLabel="Number of contacts"> </ngx-charts-bar-vertical>
-        </div>    
-        <div>
-            <p><strong>Length of name</strong></p>
-            <ngx-charts-line-chart [view]="[400,300]" [results]="contactsByFullName" [xAxis]="true" [yAxis]="true"
-            [legend]="false" [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Full Name Length"
-            yAxisLabel="Number of contacts"></ngx-charts-line-chart>
-        </div>
-        </div>
-        <div class="chart-row">
-            <div>
-                <p><strong>Extensions</strong></p>
-        <ngx-charts-pie-chart [view]="[400,300]" [results]="emailExtensions" [labels]="true" [doughnut]="true">
+  <mat-card-title> Charts- Contacts </mat-card-title>
+  <mat-card-content>
+    <div class="chart-row">
+      <div>
+        <p><strong> Initial Surname</strong></p>
+
+        <ngx-charts-bar-vertical
+          [view]="[400, 300]"
+          [results]="initialLetter"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          xAxisLabel="Initial of surname"
+          yAxsisLabel="Number of contacts"
+        >
+        </ngx-charts-bar-vertical>
+      </div>
+      <div>
+        <p><strong>Length of name</strong></p>
+        <ngx-charts-line-chart
+          [view]="[400, 300]"
+          [results]="contactsByFullName"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          xAxisLabel="Full Name Length"
+          yAxisLabel="Number of contacts"
+        ></ngx-charts-line-chart>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div>
+        <p><strong>Extensions</strong></p>
+        <ngx-charts-pie-chart
+          [view]="[400, 300]"
+          [results]="emailExtensions"
+          [labels]="true"
+          [doughnut]="true"
+        >
         </ngx-charts-pie-chart>
-            </div>
-            <div>
-                <p><strong>Prefix</strong></p>
-        <ngx-charts-bar-horizontal [view]="[400,300]" [results]="phonePrefixData" [xAxis]="true" [yAxis]="true"
-        [legend]="false" [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Number of Contacts"
-        yAxisLabel="Phone Prefix"></ngx-charts-bar-horizontal>  
-            </div>
-            <div>
-                
-    <p><strong>Product Categories</strong></p>
-    <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="productCategoryData" [xAxis]="true"
-    [yAxis]="true" [legend]="false" [showXAxisLabel]="true" [showYAxisLabel]="true"
-    xAxisLabel="Number of Products" yAxisLabel="Product Category"></ngx-charts-bar-horizontal>
-            </div>
+      </div>
+      <div>
+        <p><strong>Prefix</strong></p>
+        <ngx-charts-bar-horizontal
+          [view]="[400, 300]"
+          [results]="phonePrefixData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          xAxisLabel="Number of Contacts"
+          yAxisLabel="Phone Prefix"
+        ></ngx-charts-bar-horizontal>
+      </div>
+      <div></div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="card">
+  <mat-card-title> Charts- Products </mat-card-title>
+  <mat-card-content>
+    <div class="chart-row">
+      <div>
+        <p><strong>Product Categories</strong></p>
+        <ngx-charts-bar-horizontal
+          [view]="[400, 300]"
+          [results]="productsByCategory"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          xAxisLabel="Number of Products"
+          yAxisLabel="Product Category"
+        ></ngx-charts-bar-horizontal>
+      </div>
+      <div>
+        <div>
+          <p><strong>Average Price by Product Category</strong></p>
+          <ngx-charts-bar-horizontal
+            [view]="[400, 300]"
+            [results]="averagePriceByCategory"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="false"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            xAxisLabel="Average Price"
+            yAxisLabel="Product Category"
+          ></ngx-charts-bar-horizontal>
         </div>
-    </mat-card-content>
+
+        <div>
+          <p><strong>Stock by Category</strong></p>
+          <ngx-charts-bar-horizontal
+            [view]="[400, 300]"
+            [results]="stockByCategoryData"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="false"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            xAxisLabel="Stock"
+            yAxisLabel="Product Category"
+          ></ngx-charts-bar-horizontal>
+        </div>
+
+        <div>
+            <p><strong>Product Availability</strong></p>
+            <ngx-charts-bar-horizontal
+              [view]="[400, 300]"
+              [results]="productActive"
+              [xAxis]="true"
+              [yAxis]="true"
+              [legend]="true"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true"
+              xAxisLabel="Quantity"
+              yAxisLabel="Availability"
+            ></ngx-charts-bar-horizontal>
+          </div>
+          
+      </div>
+    </div>
+  </mat-card-content>
 </mat-card>
